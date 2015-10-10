@@ -1,0 +1,154 @@
+﻿@model IEnumerable<net_review.Models.List>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @*@Html.ActionLink("Create New", "Create")*@
+    @Html.ActionLink("Create New", "Create", new { id = Request.QueryString["id"] })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Question)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QuestionCn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnswerCn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnswerSimple)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnswerDraft)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sort)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Num)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Complete)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mark)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Image)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Img)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChoiceA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChoiceB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChoiceC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChoiceD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChoiceType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChoiceAnswer)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Question)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QuestionCn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnswerCn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnswerSimple)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnswerDraft)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sort)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Num)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Complete)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mark)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Image)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Img)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChoiceA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChoiceB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChoiceC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChoiceD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChoiceType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChoiceAnswer)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

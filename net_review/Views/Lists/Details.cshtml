@@ -1,0 +1,186 @@
+﻿@model net_review.Models.List
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>List</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Question)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Question)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuestionCn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuestionCn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnswerCn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnswerCn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnswerSimple)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnswerSimple)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnswerDraft)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnswerDraft)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Category)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sort)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sort)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Num)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Num)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Complete)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Complete)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mark)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mark)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Image)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Img)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Img)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ChoiceA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChoiceA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ChoiceB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChoiceB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ChoiceC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChoiceC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ChoiceD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChoiceD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ChoiceType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChoiceType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ChoiceAnswer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChoiceAnswer)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
