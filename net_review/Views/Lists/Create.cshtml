@@ -110,7 +110,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Cid, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Cid, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.Cid, new { htmlAttributes = new { @class = "form-control" , value=ViewContext.RouteData.Values["id"] } })
                 @Html.ValidationMessageFor(model => model.Cid, "", new { @class = "text-danger" })
             </div>
         </div>

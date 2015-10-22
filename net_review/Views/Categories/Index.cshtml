@@ -12,7 +12,7 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.CategoryName)</a>
+            @Html.DisplayNameFor(model => model.CategoryName)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.ParentID)
@@ -61,7 +61,7 @@
         <td>
 
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("List", "Index", "Lists" , new {}, new { id = item.ID }) |
+            @Html.ActionLink("List", "ListIndex", "Lists" , new {id=item.ID}, new { id = item.ID }) |
             @Html.ActionLink("Details", "Details", new { id=item.ID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.ID })
         </td>
@@ -69,8 +69,24 @@
 }
 
 </table>
-<form action="~/categories/batchinsert" method="post">
-    <textarea class="form-control" name="textArea"></textarea>
-    <input type="hidden" name="pid" value="@Request.QueryString["id"]" />
-    <input type="submit" />
-</form>
+<a data-target="#modalBatchInsertCategories" data-toggle="modal" class="btn btn-primary">Batch Insert</a>
+<div class="modal fade" id="modalBatchInsertCategories">
+    <div class="modal-dialog">
+        <form action="~/categories/batchinsert" method="post">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Batch Insert</h4>
+                </div>
+                <div class="modal-body">
+                    <textarea class="form-control wMaxUnset" name="textArea" rows="10"></textarea>
+                    <input type="hidden" name="pid" value="@Request.QueryString["id"]" />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <input type="submit" class="btn btn-primary" />
+                </div>
+            </div><!-- /.modal-content -->
+        </form>
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

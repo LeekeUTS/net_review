@@ -15,6 +15,7 @@ namespace net_review.Controllers
         private ReviewDbContext db = new ReviewDbContext();
 
         // GET: Categories
+        // Todo: Model another writing way
         public ActionResult Index(int? id)
         {
             
@@ -26,6 +27,18 @@ namespace net_review.Controllers
             }
             return View(db.Category.Where(x => x.ParentID == id).ToList());
             //return View(db.Category.ToList());
+        }
+
+        public ActionResult Json()
+        {
+            //var movies = new List<object>();
+
+            //movies.Add(new { Title = "Ghostbusters", Genre = "Comedy", Year = 1984 });
+            //movies.Add(new { Title = "Gone with Wind", Genre = "Drama", Year = 1939 });
+            //movies.Add(new { Title = "Star Wars", Genre = "Science Fiction", Year = 1977 });
+
+            //return Json(movies, JsonRequestBehavior.AllowGet);
+            return Json(db.Category.ToList(), JsonRequestBehavior.AllowGet);
         }
 
         [HttpPost]
