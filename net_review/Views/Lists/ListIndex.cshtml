@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<net_review.Models.List>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = ViewBag.CategoryCategoryName;
 }
 
-<h2>Index</h2>
+<h2>@ViewBag.CategoryCategoryName</h2>
 
 <p>
     @*@Html.ActionLink("Create New", "Create")*@
@@ -45,7 +45,8 @@
             <td>
                 @*@Html.ActionLink("Edit", "Edit", new { id = item.ID }) |*@
                 @*@Html.ActionLink("Details", "Details", new { id = item.ID }) |*@
-                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                @Html.ActionLink("Delete", "ListDelete", new { id = item.ID })
+               
             </td>
         </tr>
         i++;
@@ -53,7 +54,9 @@
 </table>
 
 <a data-target="#modalBatchInsertList" data-toggle="modal" class="btn btn-primary">Batch Insert</a>
-@Html.ActionLink("Batch Insert Advance", "ListBatchInsertMulti", "Lists", new { id = ViewContext.RouteData.Values["id"] }, new { @class = "btn btn-primary" })
+@Html.ActionLink("Batch Insert Advance", "ListBatchInsertMulti", "Lists", 
+new { id = ViewContext.RouteData.Values["id"] }, new { @class = "btn btn-primary" })
+@Html.ActionLink("Back", "Index", "Categories", new { id = ViewBag.CategoryParentID }, new { @class = "btn btn-primary" })
 
 <div class="modal fade" id="modalBatchInsertList">
     <div class="modal-dialog">

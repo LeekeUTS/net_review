@@ -174,7 +174,7 @@
     <Content Include="Views\Categories\Edit.cshtml" />
     <Content Include="Views\Categories\Index.cshtml" />
     <Content Include="Views\Lists\Create.cshtml" />
-    <Content Include="Views\Lists\Delete.cshtml" />
+    <Content Include="Views\Lists\ListDelete.cshtml" />
     <Content Include="Views\Lists\Details.cshtml" />
     <Content Include="Views\Lists\Edit.cshtml" />
     <Content Include="Views\Lists\Index.cshtml" />

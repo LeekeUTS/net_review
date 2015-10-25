@@ -1,15 +1,18 @@
 ﻿@model IEnumerable<net_review.Models.Category>
 
-@{
-    ViewBag.Title = "Index";
+@if(ViewBag.ThisID==0){
+    ViewBag.Title = "Review";
+}
+else
+{
+    ViewBag.Title = ViewBag.CategoryCategoryName;
 }
 
-<h2>Index</h2>
-
+<h2>@ViewBag.Title</h2>
 <p>
     @Html.ActionLink("Create New", "Create", new { id = Request.QueryString["id"] })
 </p>
-<table class="table">
+<table class="table table-hover">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.CategoryName)
@@ -36,9 +39,16 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
+    <tr class="@item.Status">
         <td>
-            <a href="~/Categories?id=@item.ID">@Html.DisplayFor(modelItem => item.CategoryName)</a>
+            @if (ViewBag.ThisID == 0)
+            {
+                Write(Html.ActionLink(item.CategoryName, "index", "Categories", new { id = item.ID }, null));
+            }
+            else
+            {
+                Write(Html.ActionLink(item.CategoryName, "ListIndex", "Lists", new { id = item.ID }, null));
+            }
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.ParentID)
@@ -61,8 +71,8 @@
         <td>
 
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("List", "ListIndex", "Lists" , new {id=item.ID}, new { id = item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @*@Html.ActionLink("List", "ListIndex", "Lists", new { id = item.ID }, new { id = item.ID }) |
+    @Html.ActionLink("Details", "Details", new { id=item.ID }) |*@
             @Html.ActionLink("Delete", "Delete", new { id=item.ID })
         </td>
     </tr>

@@ -24,7 +24,14 @@ namespace net_review.Controllers
             if (id == null)
             {
                 id = 0;
+                
             }
+            else
+            {
+                Category category = db.Category.Find(id);
+                ViewBag.CategoryCategoryName = category.CategoryName;
+            }
+            ViewBag.ThisID = id;
             return View(db.Category.Where(x => x.ParentID == id).ToList());
             //return View(db.Category.ToList());
         }
