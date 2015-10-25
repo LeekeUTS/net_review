@@ -51,7 +51,7 @@ namespace net_review.Controllers
                 string[] lines = textArea.Split(stringSeparators, StringSplitOptions.None);
                 for (int count = 0; count <= lines.Length - 1; count++)
                 {
-                    db.Category.Add(new Category() { CategoryName = lines[count], ParentID = pid.Value });
+                    db.Category.Add(new Category() { CategoryName = lines[count], ParentID = pid.Value, Sort=(count+1) });
 
                 }
 

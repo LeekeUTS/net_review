@@ -179,6 +179,7 @@
     <Content Include="Views\Lists\Edit.cshtml" />
     <Content Include="Views\Lists\Index.cshtml" />
     <Content Include="Views\Lists\ListIndex.cshtml" />
+    <Content Include="Views\Lists\ListBatchInsertMulti.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

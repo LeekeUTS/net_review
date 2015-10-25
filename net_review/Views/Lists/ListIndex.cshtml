@@ -13,6 +13,7 @@
 <table class="table">
     <tr>
         <th></th>
+        <th></th>
         <th>
             @Html.DisplayNameFor(model => model.Question)
         </th>
@@ -26,6 +27,9 @@
     @foreach (var item in Model)
     {
         <tr>
+            <td>
+                <input type="checkbox" name="batch_id" />
+            </td>
             <td>
                 @i
             </td>
@@ -46,10 +50,11 @@
         </tr>
         i++;
     }
-
 </table>
 
 <a data-target="#modalBatchInsertList" data-toggle="modal" class="btn btn-primary">Batch Insert</a>
+@Html.ActionLink("Batch Insert Advance", "ListBatchInsertMulti", "Lists", new { id = ViewContext.RouteData.Values["id"] }, new { @class = "btn btn-primary" })
+
 <div class="modal fade" id="modalBatchInsertList">
     <div class="modal-dialog">
         @* Todo: Use MVC  *@

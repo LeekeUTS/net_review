@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "ListBatchInsertMulti";
+}
+
+<h2>ListBatchInsertMulti</h2>
+<form action="~/lists/ListBatchInsertMulti" method="post">
+    <textarea name="textArea" class="form-control" rows="20"></textarea>
+    <input type="hidden" name="cid" value="@ViewContext.RouteData.Values["id"]" />
+    <input type="submit" class="btn btn-primary sizeFull mtl" />
+</form>
